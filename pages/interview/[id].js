@@ -16,7 +16,6 @@ export default function Interview({ interviewData }) {
         questions = router.query.questions
     }
 
-    console.log("&&&&&&&&&&", typeof questions)
     return (
         <>
             <Head>

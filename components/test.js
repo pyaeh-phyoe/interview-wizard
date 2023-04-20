@@ -26,6 +26,7 @@ export default function Test({ name, email, questions, applyId, interviewId }) {
             element.answer = answers[index]
             element.history = history[index]
             element.totalTime = totalTime[index]
+            element.lang = lang
             data.push(element)
         }
 
@@ -38,7 +39,6 @@ export default function Test({ name, email, questions, applyId, interviewId }) {
 
             await setDoc(doc(db, "interview", interviewId), {
                 totalDuration,
-                lang,
                 name,
                 data
             });

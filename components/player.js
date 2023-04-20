@@ -9,7 +9,7 @@ import { python } from "@codemirror/lang-python"
 import { php } from "@codemirror/lang-php"
 import secondsToMinute from "@/utility/sec2min"
 
-export default function Player({answer, history, totalTime, lang}) {
+export default function Player({ answer, history, totalTime, lang }) {
     const [paused, setPaused] = useState(true)
     const [speed, setSpeed] = useState(1000)
     const [currentTime, setCurrentTime] = useState(0)
@@ -22,7 +22,7 @@ export default function Player({answer, history, totalTime, lang}) {
         "PHP": php,
         "Python": python
     };
-   
+
     useEffect(() => {
         let x = currentTime;
         let interval = setInterval(function () {
@@ -51,14 +51,17 @@ export default function Player({answer, history, totalTime, lang}) {
         }
     }, [currentTime])
 
+    
+    const extensions = [languageFunctions[lang]?.(), EditorView.editable.of(false), EditorState.readOnly.of(true)]
+
     return (
         <div className="w-full h-full my-2 flex flex-col justify-between border border-grey">
             <div>
                 <CodeMirror
-                    extensions={[languageFunctions[lang]?.(), EditorView.editable.of(false), EditorState.readOnly.of(true)]}
-                    value={code}
-                    height="100%"
-                    width="100%"
+                extensions={extensions}
+                value={code}
+                height="100%"
+                width="100%"
                 />
             </div>
             <div className="flex border-t border-grey p-1">
