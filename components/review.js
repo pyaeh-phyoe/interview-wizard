@@ -10,7 +10,7 @@ export default function Review({interviewData}) {
                 {
                     interviewData.data.map((data, index) => {
                         return (
-                            <div className="pt-8">
+                            <div className="pt-8" kry={index}>
                                 <h3 className="font-bold">Question {index + 1}</h3>
                                 <p className="py-2">{data.question}</p>
                                 <Player answer={data.answer} history={data.history} totalTime={data.totalTime} lang={data.lang} />
