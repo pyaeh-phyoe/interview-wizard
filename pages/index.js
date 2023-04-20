@@ -39,7 +39,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold">Create</h3>
               <p>
-                Create the questions you'd like candidates to answer. Be as creative and job-specific as you like.
+                Create the questions you&apos;d like candidates to answer. Be as creative and job-specific as you like.
               </p>
             </div>
           </div>

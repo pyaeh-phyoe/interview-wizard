@@ -38,7 +38,7 @@ export default function Apply({ dashboardData }) {
                     </p>
                     <p className="py-2">In this interview, you will be shown a number of questions and asked to answer each one in turn. Your answers will be stored online for you and your interviewer to view once you&apos;ve finished.
                     </p>
-                    <p className="py-2">It's not just your final answer that&apos;s important - it&apos;s how you get there. Your interviewer will be able to see your answer unfold as if they were sitting at the keyboard next to you. They&apos;re more interested in your thought process and method than if you dropped a semicolon somewhere.
+                    <p className="py-2">It&apos;s not just your final answer that&apos;s important - it&apos;s how you get there. Your interviewer will be able to see your answer unfold as if they were sitting at the keyboard next to you. They&apos;re more interested in your thought process and method than if you dropped a semicolon somewhere.
                     </p>
                     <p className="py-2">When you&apos;re ready, enter your details below and click Start to begin. You&apos;ll be able to see all of your answers at the end.
                     </p>

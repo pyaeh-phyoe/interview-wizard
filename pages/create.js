@@ -63,7 +63,7 @@ export default function Create({ uniqueLink }) {
 
     }
 
-    function handleClick() {
+    function createAQuestion() {
         const newQuestion = {}
         const uniqueId = randomString()
         newQuestion.id = uniqueId
@@ -79,7 +79,7 @@ export default function Create({ uniqueLink }) {
     }, [questions])
 
     useEffect(() => {
-        handleClick()
+        createAQuestion()
 
     }, [])
 
@@ -119,7 +119,7 @@ export default function Create({ uniqueLink }) {
                         </div>
                     </div>
                     <div className="flex justify-between py-3">
-                        <button className="flex" onClick={handleClick}>
+                        <button className="flex" onClick={createAQuestion}>
                             <span className="text-primaryColor">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
 
@@ -144,8 +144,6 @@ export default function Create({ uniqueLink }) {
 
 export async function getServerSideProps() {
     const uniqueLink = randomString()
-    console.log("@@@", uniqueLink)
-
     return {
         props: {
             uniqueLink
