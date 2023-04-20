@@ -59,10 +59,6 @@ export default function Player({answer, history, totalTime, lang}) {
                     value={code}
                     height="100%"
                     width="100%"
-                    // extensions={[EditorView.editable.of(false), EditorState.readOnly.of(true)]}
-
-
-                    // extensions={[languageFunctions[lang]?.(), EditorView.editable.of(false), EditorState.readOnly.of(true)]}
                 />
             </div>
             <div className="flex border-t border-grey p-1">
