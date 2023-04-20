@@ -28,7 +28,6 @@ export default function Test({ name, email, questions, applyId, interviewId }) {
             element.totalTime = totalTime[index]
             data.push(element)
         }
-        console.log(d)
 
         try {
             const docRef = doc(db, "apply", applyId)
