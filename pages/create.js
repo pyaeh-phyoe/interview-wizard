@@ -95,7 +95,7 @@ export default function Create({ uniqueLink }) {
                 <h1 className="text-4xl font-bold">Create an Interview</h1>
                 <p className="py-2">Start by creating a question you would like candidates to answer. This can be anything you like, but an open-ended question requiring a creative solution gives the candidate the best opportunity to demonstrate their ability and thought process.
                 </p>
-                <p className="py-2">Once saved, we'll create a private interview link for you to share, as well as a dashboard for you to review all of your responses.
+                <p className="py-2">Once saved, we&apos;ll create a private interview link for you to share, as well as a dashboard for you to review all of your responses.
                 </p>
 
                 <form onSubmit={(e) => createInterview(e)}>
