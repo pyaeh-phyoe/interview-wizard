@@ -15,9 +15,9 @@ export default function Home() {
         <div className="flex">
           <div className="w-6/12 mr-8">
             <h1 className="text-4xl	font-bold	">Hire the best developers</h1>
-            <p className="py-2">Don't waste time interviewing developers who aren't suitable for the job. Find out quickly how well someone can code. With Interview Wizard, you set your own programming challenges and watch how candidates solve them online.</p>
+            <p className="py-2">Don&apos;t waste time interviewing developers who aren&apos;t suitable for the job. Find out quickly how well someone can code. With Interview Wizard, you set your own programming challenges and watch how candidates solve them online.</p>
 
-            <p className="py-2">Capture the candidate's thought process and problem solving speed. See how they structure and revise their code over time. Evaluate their programming ability before you invest time in a face-to-face interview.</p>
+            <p className="py-2">Capture the candidate&apos;s thought process and problem solving speed. See how they structure and revise their code over time. Evaluate their programming ability before you invest time in a face-to-face interview.</p>
             <div className="py-3">
               <button className="btn-type-1">
                 <Link href="/create">Create an Interview</Link>

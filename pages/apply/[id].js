@@ -36,11 +36,11 @@ export default function Apply({ dashboardData }) {
                 <div className="pb-8">
                     <p className="py-2">You are about to take an online technical interview.
                     </p>
-                    <p className="py-2">In this interview, you will be shown a number of questions and asked to answer each one in turn. Your answers will be stored online for you and your interviewer to view once you've finished.
+                    <p className="py-2">In this interview, you will be shown a number of questions and asked to answer each one in turn. Your answers will be stored online for you and your interviewer to view once you&apos;ve finished.
                     </p>
-                    <p className="py-2">It's not just your final answer that's important - it's how you get there. Your interviewer will be able to see your answer unfold as if they were sitting at the keyboard next to you. They're more interested in your thought process and method than if you dropped a semicolon somewhere.
+                    <p className="py-2">It's not just your final answer that&apos;s important - it&apos;s how you get there. Your interviewer will be able to see your answer unfold as if they were sitting at the keyboard next to you. They&apos;re more interested in your thought process and method than if you dropped a semicolon somewhere.
                     </p>
-                    <p className="py-2">When you're ready, enter your details below and click Start to begin. You'll be able to see all of your answers at the end.
+                    <p className="py-2">When you&apos;re ready, enter your details below and click Start to begin. You&apos;ll be able to see all of your answers at the end.
                     </p>
                     <p className="py-2">Best of luck!
                     </p>
@@ -49,11 +49,11 @@ export default function Apply({ dashboardData }) {
                 <div className="border-t border-grey py-4">
                     <h3 className="font-bold">Example</h3>
 
-                    <p className="py-2">Let's say you were asked the following question:</p>
+                    <p className="py-2">Let&apos;s say you were asked the following question:</p>
                     <blockquote className="p-4 border border-grey rounded bg-[antiquewhite]">
-                        <p>Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".</p>
+                        <p>Write a program that prints the numbers from 1 to 100. But for multiples of three print &quot;Fizz&quot; instead of the number and for the multiples of five print &quot;Buzz&quot;. For numbers which are multiples of both three and five print &quot;FizzBuzz&quot;.</p>
                     </blockquote>
-                    <p className="py-2">You would type your solution into the textbox and hit Submit when you're happy with it. You and your interviewer would then see something like this:</p>
+                    <p className="py-2">You would type your solution into the textbox and hit Submit when you&apos;re happy with it. You and your interviewer would then see something like this:</p>
 
                 </div>
                 <Player lang={"JavaScript"}></Player>
