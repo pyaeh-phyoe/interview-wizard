@@ -15,7 +15,6 @@ export default function Apply({ dashboardData }) {
         const uniqueLink = "/interview/" + uniqueId
         const questions = dashboardData.questions
         const applyId = dashboardData.applyId
-        console.log(questions)
 
         router.push({
             pathname: uniqueLink,
@@ -28,7 +27,7 @@ export default function Apply({ dashboardData }) {
             <Head>
                 <title>Interview Wizard</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
             <div>
                 <h1 className="text-xs	">Interview Wizard</h1>
@@ -82,7 +81,6 @@ export async function getServerSideProps({ params }) {
         const docSnap = await getDoc(docRef)
 
         if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data())
             dashboardData = docSnap.data()
             dashboardData.applyId = params.id
         } else {

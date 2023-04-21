@@ -21,7 +21,7 @@ export default function Interview({ interviewData }) {
             <Head>
                 <title>Interview Wizard</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
             <div>
                 <h1 className="text-xs">Interview Wizard</h1>
@@ -45,7 +45,6 @@ export async function getServerSideProps({ params }) {
         const docSnap = await getDoc(docRef)
 
         if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data())
             interviewData = docSnap.data()
         } else {
             console.log("No such document!");

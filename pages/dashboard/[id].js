@@ -18,7 +18,7 @@ export default function Dashboard({ dashboardData }) {
             <Head>
                 <title>Interview Wizard</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
             <div>
                 <h1 className="text-xs">Interview Wizard</h1>
@@ -68,7 +68,6 @@ export async function getServerSideProps({ params }) {
         const dashboardSnap = await getDoc(dashboardRef)
 
         if (dashboardSnap.exists()) {
-            console.log("Document data:", dashboardSnap.data())
             applyLink = dashboardSnap.data().applyLink
         } else {
             console.log("No such document!")
@@ -78,7 +77,6 @@ export async function getServerSideProps({ params }) {
         const applySnap = await getDoc(applyRef)
 
         if (applySnap.exists()) {
-            console.log("Document data:", applySnap.data())
             dashboardData = applySnap.data()
             dashboardData.applyLink = applyLink
         } else {

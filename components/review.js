@@ -2,7 +2,6 @@ import Player from "./player"
 import secondsToMinute from "@/utility/sec2min"
 
 export default function Review({interviewData}) {
-    console.log(interviewData)
     return (
         <div>
             <h2 className="text-4xl font-bold">{interviewData.name}</h2>
