@@ -1,8 +1,10 @@
 import Head from "next/head"
 import Link from "next/link"
 import Player from "@/components/player"
+import { answer, history, totalTime } from "@/data"
 
 export default function Home() {
+  console.log(history)
   return (
     <>
       <Head>
@@ -25,7 +27,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-6/12">
-            <Player lang={"JavaScript"}/>
+            <Player lang={"JavaScript"} answer={answer} history={history} totalTime={totalTime}/>
           </div>
         </div>
         <div className="flex py-16">

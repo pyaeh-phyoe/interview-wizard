@@ -10,8 +10,11 @@ import { php } from "@codemirror/lang-php"
 import secondsToMinute from "@/utility/sec2min"
 
 export default function Player({ answer, history, totalTime, lang }) {
+    console.log(answer)
+    console.log(JSON.stringify(history, null, 2));
+
     const [paused, setPaused] = useState(true)
-    const [speed, setSpeed] = useState(1000)
+    const [speed, setSpeed] = useState(200)
     const [currentTime, setCurrentTime] = useState(0)
     const [code, setCode] = useState(answer)
 
@@ -21,7 +24,8 @@ export default function Player({ answer, history, totalTime, lang }) {
         "JavaScript": () => javascript({ jsx: true }),
         "PHP": php,
         "Python": python
-    };
+    }
+
 
     useEffect(() => {
         let x = currentTime;
@@ -39,7 +43,7 @@ export default function Player({ answer, history, totalTime, lang }) {
             }
         }, speed)
         return () => clearInterval(interval);
-    }, [paused])
+    }, [paused, speed])
 
     useEffect(() => {
         if (!paused) {
@@ -51,17 +55,17 @@ export default function Player({ answer, history, totalTime, lang }) {
         }
     }, [currentTime])
 
-    
+
     const extensions = [languageFunctions[lang]?.(), EditorView.editable.of(false), EditorState.readOnly.of(true)]
 
     return (
         <div className="w-full h-full my-2 flex flex-col justify-between border border-grey">
-            <div>
+            <div className="flex h-full">
                 <CodeMirror
-                extensions={extensions}
-                value={code}
-                height="100%"
-                width="100%"
+                    extensions={extensions}
+                    value={code}
+                    height="100%"
+                    width="100%"
                 />
             </div>
             <div className="flex border-t border-grey p-1">
@@ -78,9 +82,9 @@ export default function Player({ answer, history, totalTime, lang }) {
                     }
                 </button>
                 <div className="text-xs mr-2">
-                    <button className="w-8 h-6 border border-grey rounded-l" onClick={() => setSpeed(1000)}>1x</button>
-                    <button className="w-8 h-6 border border-grey border-l-0 " onClick={() => setSpeed(500)}>2x</button>
-                    <button className="w-8 h-6 border border-grey border-l-0 rounded-r" onClick={() => setSpeed(200)}>5x</button>
+                    <button className={`w-8 h-6 border border-grey rounded-l ${speed === 1000 ? "active-btn" : ""}`} onClick={(e) => setSpeed(1000)}>1x</button>
+                    <button className={`w-8 h-6 border border-grey border-l-0 ${speed === 500 ? "active-btn" : ""}`} onClick={() => setSpeed(500)}>2x</button>
+                    <button className={`w-8 h-6 border border-grey border-l-0 rounded-r ${speed === 200 ? "active-btn" : ""}`} onClick={() => setSpeed(200)}>5x</button>
                 </div>
                 <div className="grow mr-2 flex">
                     <input className="grow" type="range" name="" id="" value={currentTime} onChange={(e) => setCurrentTime(parseInt(e.target.value))} min="0" max={totalTime} />
