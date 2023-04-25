@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import Player from "@/components/player"
+import { answer, history, totalTime } from "@/data"
 
 export default function Apply({ dashboardData }) {
     const router = useRouter()
@@ -55,7 +56,7 @@ export default function Apply({ dashboardData }) {
                     <p className="py-2">You would type your solution into the textbox and hit Submit when you&apos;re happy with it. You and your interviewer would then see something like this:</p>
 
                 </div>
-                <Player lang={"JavaScript"}></Player>
+                <Player lang={"JavaScript"} answer={answer} history={history} totalTime={totalTime}></Player>
                 <form onSubmit={e => addApplicant(e)} className="py-4">
                     <div className="py-2 flex">
                         <label className="w-2/12" htmlFor="name">Name</label>
